@@ -16,20 +16,20 @@ namespace MultiShop.Catalog.Mapping
             CreateMap<Category, UpdateCategoryDto>().ReverseMap();
             CreateMap<Category, GetByIdCategoryDto>().ReverseMap();
 
-            CreateMap<Category, ResultProductDto>().ReverseMap();
-            CreateMap<Category, CreateProductDto>().ReverseMap();
-            CreateMap<Category, UpdateProductDto>().ReverseMap();
-            CreateMap<Category, GetByIdProductDto>().ReverseMap();
+            CreateMap<Product, ResultProductDto>().ReverseMap();
+            CreateMap<Product, CreateProductDto>().ReverseMap();
+            CreateMap<Product, UpdateProductDto>().ReverseMap();
+            CreateMap<Product, GetByIdProductDto>().ReverseMap();
 
-            CreateMap<Category, ResultProductDetailDto>().ReverseMap();
-            CreateMap<Category, CreateProductDetailDto>().ReverseMap();
-            CreateMap<Category, UpdateProductDetailDto>().ReverseMap();
-            CreateMap<Category, GetByIdProductDetailDto>().ReverseMap();
+            CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
+            CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
+            CreateMap<ProductDetail, UpdateProductDetailDto>().ReverseMap();
+            CreateMap<ProductDetail, GetByIdProductDetailDto>().ReverseMap();
 
-            CreateMap<Category, ResultProductImageDto>().ReverseMap();
-            CreateMap<Category, CreateProductImageDto>().ReverseMap();
-            CreateMap<Category, UpdateProductImageDto>().ReverseMap();
-            CreateMap<Category, GetByIdProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
         }
     }
 }

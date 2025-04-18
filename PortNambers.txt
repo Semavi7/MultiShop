@@ -1,4 +1,5 @@
-Identity --> 5001
-Catalog  --> 7232
-Discount --> 7233
-Order    --> 7234
+Identity -->   5001
+Catalog  -->   7232
+Discount -->   7233
+Order    -->   7234
+Cargo    -->   7235

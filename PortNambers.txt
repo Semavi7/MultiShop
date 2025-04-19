@@ -3,3 +3,4 @@ Catalog  -->   7232
 Discount -->   7233
 Order    -->   7234
 Cargo    -->   7235
+Basket   -->   7236

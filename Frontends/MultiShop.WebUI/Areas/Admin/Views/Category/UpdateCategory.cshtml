@@ -8,14 +8,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="chart-box">
-                <h4>Kategori Listesi</h4>
-                <p>Kategori ile ilgili işlemlerinizi aşağıdaki tablo üzerinden gerçekleştirebilirsiniz.</p>
+                <h4>Kategori Güncelleme Sayfası</h4>
                 <div class="bs-example" data-example-id="bordered-table">
                     <form method="post">
-                        <label>Kategory Id</label>
-                        <input type="text" readonly class="form-control" asp-for="CategoryID" />
-                        <br />
-                        <label>Kategory Adı</label>
+                        <input type="hidden" asp-for="CategoryID" />
+                        <label>Kategori Adı</label>
                         <input type="text" class="form-control" asp-for="CategoryName" />
                         <br />
                         <button class="btn btn-primary">Kategoriyi Güncelle</button>

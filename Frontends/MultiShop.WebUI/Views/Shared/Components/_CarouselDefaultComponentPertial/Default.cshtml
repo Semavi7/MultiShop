@@ -12,11 +12,13 @@
 					<li data-target="#header-carousel" data-slide-to="1"></li>
 					<li data-target="#header-carousel" data-slide-to="2"></li>
 					<li data-target="#header-carousel" data-slide-to="3"></li>
+					<li data-target="#header-carousel" data-slide-to="4"></li> 
 				</ol>
 				<div class="carousel-inner">
 
 					@foreach (var item in Model)
 					{
+
 						count++;
 						if(count == 1)
 						{
@@ -26,7 +28,7 @@
 									<div class="p-3" style="max-width: 700px;">
 										<h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">@item.Title</h1>
 										<p class="mx-md-5 px-5 animate__animated animate__bounceIn">@item.Description</p>
-										<a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+										<a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Alışverişe Başla</a>
 									</div>
 								</div>
 							</div>
@@ -39,7 +41,7 @@
 									<div class="p-3" style="max-width: 700px;">
 										<h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">@item.Title</h1>
 										<p class="mx-md-5 px-5 animate__animated animate__bounceIn">@item.Description</p>
-										<a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+										<a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Alışverişe Başla</a>
 									</div>
 								</div>
 							</div>

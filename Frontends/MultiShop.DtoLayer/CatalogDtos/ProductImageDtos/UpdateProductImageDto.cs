@@ -1,4 +1,10 @@
-﻿namespace MultiShop.Catalog.Dtos.ProductImageDtos
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultiShop.DtoLayer.CatalogDtos.ProductImageDtos
 {
     public class UpdateProductImageDto
     {

@@ -1,6 +1,7 @@
-﻿<div class="col-lg-7 h-auto mb-30">
+﻿@model UpdateProductDto
+<div class="col-lg-7 h-auto mb-30">
     <div class="h-100 bg-light p-30">
-        <h3>Spor Ayakkabı</h3>
+        <h3>@Model.ProductName</h3>
         <div class="d-flex mb-3">
             <div class="text-primary mr-2">
                 <small class="fas fa-star"></small>
@@ -11,10 +12,11 @@
             </div>
             <small class="pt-1">(99 Değerlendirme)</small>
         </div>
-        <h3 class="font-weight-semi-bold mb-4">₺2500.00</h3>
+        <h3 class="font-weight-semi-bold mb-4">₺@Model.ProductPrice</h3>
         <p class="mb-4">
-            Spor yaparken ayağınızı rahar ettirecek güzel bir ayakkabı.
+            @Model.ProductDesciption
         </p>
+
         <div class="d-flex mb-3">
             <strong class="text-dark mr-3">Ebatlar:</strong>
             <form>
@@ -48,6 +50,7 @@
                 </div>
             </form>
         </div>
+
         <div class="d-flex mb-4">
             <strong class="text-dark mr-3">Renkler:</strong>
             <form>
@@ -73,6 +76,7 @@
                 </div>
             </form>
         </div>
+
         <div class="d-flex align-items-center mb-4 pt-2">
             <div class="input-group quantity mr-3" style="width: 130px;">
                 <div class="input-group-btn">
@@ -91,6 +95,7 @@
                 <i class="fa fa-shopping-cart mr-1"></i> Sepete Ekle
             </button>
         </div>
+
         <div class="d-flex pt-2">
             <strong class="text-dark mr-2">Paylaş:</strong>
             <div class="d-inline-flex">

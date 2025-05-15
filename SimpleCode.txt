@@ -49,3 +49,22 @@ string token;
                     }
                 }
             }
+
+
+            
+
+       
+
+        
+
+        
+
+        
+
+        
+
+
+        "AuthenticationOptions": {
+                "AuthenticationProviderKey": "OcelotAuthenticationScheme",
+                "AllowedScopes": [ "CatalogFullPermission" ]
+            }

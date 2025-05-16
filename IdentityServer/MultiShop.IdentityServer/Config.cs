@@ -66,7 +66,11 @@ namespace MultiShop.IdentityServer
                 ClientName = "Multi Shop Maneger User",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
-                AllowedScopes={ "CatalogReadPermission", "OrderFullPermisson", "BasketFullPermisson", "CommentFullPermisson", "OcelotFullPermisson", "PaymentFullPermission", "ImagesFullPermission" }
+                AllowedScopes={ "CatalogReadPermission", "OrderFullPermisson", "BasketFullPermisson", "CommentFullPermisson", "OcelotFullPermisson", "PaymentFullPermission", "ImagesFullPermission",
+                IdentityServerConstants.LocalApi.ScopeName,
+                IdentityServerConstants.StandardScopes.Email,
+                IdentityServerConstants.StandardScopes.OpenId,
+                IdentityServerConstants.StandardScopes.Profile }
             },
 
             //Admin

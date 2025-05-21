@@ -20,7 +20,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             _categoryService = categoryService;
         }
 
-        void CategoryViewbagList()
+        void CategoryViewBagList()
         {
             ViewBag.v1 = "Ana Sayfa";
             ViewBag.v2 = "Kategoriler";
@@ -31,7 +31,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         //[Route("Index")]
         public async Task<IActionResult> Index()
         {
-            CategoryViewbagList();
+            CategoryViewBagList();
             var values = await _categoryService.GetAllCategoryAsync();
             return View(values);
         }
@@ -40,7 +40,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         //[Route("CreateCategory")]
         public IActionResult CreateCategory()
         {
-            CategoryViewbagList();
+            CategoryViewBagList();
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateCategory(string id)
         {
-            CategoryViewbagList();
+            CategoryViewBagList();
             var values = await _categoryService.GetByIdCategoryAsync(id);
             return View(values);
         }

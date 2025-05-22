@@ -6,6 +6,9 @@ namespace MultiShop.WebUI.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.d1 = "MultiShop";
+            ViewBag.d2 = "Ana Sayfa";
+            ViewBag.d3 = "Ürün Listesi";
             return View();
         }
     }

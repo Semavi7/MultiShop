@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Comment.Context;
 using MultiShop.Comment.Entities;
 
 namespace MultiShop.Comment.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CommentsController : ControllerBase
@@ -55,7 +57,7 @@ namespace MultiShop.Comment.Controllers
             return Ok("Yorum başarı ile silindi");
         }
 
-        [HttpGet("CommentListByProductId")]
+        [HttpGet("CommentListByProductId/{id}")]
         public IActionResult CommentListByProductId(string id)
         {
             var values = _commentContext.UserComments.Where(x => x.ProductId == id).ToList();

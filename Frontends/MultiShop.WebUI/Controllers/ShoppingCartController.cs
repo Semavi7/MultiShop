@@ -23,6 +23,11 @@ namespace MultiShop.WebUI.Controllers
             ViewBag.d2 = "Ürünler";
             ViewBag.d3 = "Sepetim";
             var values = await _basketService.GetBasket();
+            ViewBag.total = values.TotalPrice;
+            var totalPriceWithTax = values.TotalPrice + values.TotalPrice / 100 * 10;
+            ViewBag.totalPriceWithTax = totalPriceWithTax;
+            var tax = values.TotalPrice / 100 * 10;
+            ViewBag.tax = tax;
             return View(values);
         }
 

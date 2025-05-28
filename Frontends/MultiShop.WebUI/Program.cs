@@ -18,6 +18,7 @@ using MultiShop.WebUI.Services.CommentServices;
 using MultiShop.WebUI.Services.Concrete;
 using MultiShop.WebUI.Services.DiscountServices;
 using MultiShop.WebUI.Services.Interface;
+using MultiShop.WebUI.Services.OrderServices.AddressServices;
 using MultiShop.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -134,6 +135,11 @@ builder.Services.AddHttpClient<IBasketService, BasketService>(opt =>
 builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Discount.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IAddressService, AddressService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Order.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 

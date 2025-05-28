@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Domain.Entities
+namespace MultiShop.DtoLayer.OrderDtos.OrderAddressDtos
 {
-    public class Address
+    public class CreateAddressDto
     {
-        public int AddressId { get; set; }
         public string UserId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

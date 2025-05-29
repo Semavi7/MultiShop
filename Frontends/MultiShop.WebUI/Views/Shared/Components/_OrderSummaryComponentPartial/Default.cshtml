@@ -1,4 +1,17 @@
-﻿<div class="bg-light p-30 mb-5">
+﻿@model List<BasketItemDto>
+<div class="bg-light p-30 mb-5">
+   
+    <div class="border-bottom">
+        <h6 class="mb-3">Sipariş Listesi</h6>
+		@foreach (var item in Model)
+		{
+        <div class="d-flex justify-content-between">
+            <p>@item.ProductName (@item.Quantity)</p>
+            <h6>@item.Price ₺</h6>
+        </div>
+		}
+    </div>
+	
     <div class="border-bottom pt-3 pb-2">
         <div class="d-flex justify-content-between mb-3">
             <h6>Sipariş Ücreti</h6>

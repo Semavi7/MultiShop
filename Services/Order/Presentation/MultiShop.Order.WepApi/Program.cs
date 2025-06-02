@@ -18,6 +18,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(IOrderingRepostory), typeof(OrderingRepository));
 builder.Services.AddApplicationService(builder.Configuration);
 
 #region

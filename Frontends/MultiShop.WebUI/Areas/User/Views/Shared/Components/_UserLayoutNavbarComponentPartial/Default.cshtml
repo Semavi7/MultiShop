@@ -10,7 +10,7 @@
         <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Tekrar Hoşgeldin, Brondon Haynes</h4>
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item">
-                <h4 class="mb-0 font-weight-bold d-none d-xl-block">@DateTime.Now.ToShortDateString()</h4>
+                <h4 class="mb-0 font-weight-bold d-none d-xl-block">@((DateTime.Now).ToString("dd-MMM-yyyy"))</h4>
             </li>
             <li class="nav-item dropdown mr-1">
                 <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
@@ -117,7 +117,7 @@
         <ul class="navbar-nav mr-lg-2">
             <li class="nav-item nav-search d-none d-lg-block">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Here..." aria-label="search" aria-describedby="search">
+                    <input type="text" class="form-control" placeholder="Aranacak kelimeleri giriniz..." aria-label="search" aria-describedby="search">
                 </div>
             </li>
         </ul>

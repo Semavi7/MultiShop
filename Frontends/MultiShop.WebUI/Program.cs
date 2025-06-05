@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MultiShop.WebUI.Handlers;
 using MultiShop.WebUI.Services;
 using MultiShop.WebUI.Services.BasketServices;
+using MultiShop.WebUI.Services.Cargoservices.CargoCompanyServices;
+using MultiShop.WebUI.Services.Cargoservices.CargoCustomerServices;
 using MultiShop.WebUI.Services.CatalogServices.AboutServices;
 using MultiShop.WebUI.Services.CatalogServices.BrandServices;
 using MultiShop.WebUI.Services.CatalogServices.CategoryServices;
@@ -160,6 +162,16 @@ builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Message.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
+builder.Services.AddHttpClient<ICargoCompanyService, CargoCompanyService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Cargo.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<ICargoCustomerService, CargoCustomerService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Cargo.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
 
 var app = builder.Build();
 
@@ -179,17 +191,19 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "areas",
-            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
-app.MapControllerRoute(
     name: "Admin",
     pattern: "{area=Admin}/{controller=Category}/{action=Index}/{id?}");
+
 
 //app.MapControllerRoute(
 //    name: "default",

@@ -26,13 +26,13 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown messages-menu" style="height: 50px; width: 46px">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height: 50px; width: 46px">
                         <i class="icon-envelope"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge">@ViewBag.MessageCount</span></div>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
+                        <li class="header">@ViewBag.MessageCount adet mesajınız var</li>
                         <li>
                             <ul class="menu">
                                 <li>
@@ -74,13 +74,13 @@
                 </li>
                 <!-- messages-menu -->
                 <!-- Notifications Menu -->
-                <li class="dropdown notifications-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown notifications-menu" style="height: 50px; width: 46px">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height: 50px; width: 46px">
                         <i class="icon-megaphone"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge">@ViewBag.TotalCommentCount</span> </div>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">Notifications</li>
+                        <li class="header">Son Yorumlar</li>
                         <li>
                             <ul class="menu">
                                 <li><a href="#"><i class="icon-lightbulb"></i> Lorem ipsum dolor sit amet </a> </li>

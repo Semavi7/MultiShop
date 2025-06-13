@@ -24,6 +24,7 @@ namespace MultiShop.WebUI.Areas.Admin.ViewComponents.AdminLayoutViewComponents
             var user = await _userService.GetUserInfo();
             int messageCount = await _messageService.GetTotalMessageCountByReceiverId(user.Id);
             ViewBag.MessageCount = messageCount;
+            ViewBag.User = user.Id;
 
             int totalCommentCount = await _commentStatisticService.GetTotalCommentCount();
             ViewBag.TotalCommentCount = totalCommentCount;

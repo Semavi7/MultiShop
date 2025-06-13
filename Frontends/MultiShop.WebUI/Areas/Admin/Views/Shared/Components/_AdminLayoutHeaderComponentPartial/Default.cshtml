@@ -1,5 +1,31 @@
-﻿<header class="main-header dark-bg">
+﻿<script src="~/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 
+<header class="main-header dark-bg">
+    <script type="text/javascript">
+        var userId =  @Html.Raw(Json.Serialize(ViewBag.User));
+        $(document).ready(() => {
+            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7171/SignalRHub").build();
+            $("#connstatus").text(connection.state);
+
+            connection.start().then(() => {
+                $("#connstatus").text(connection.state);
+                console.log("Sunucuya gönderilen ID: " + userId);
+                connection.invoke("SendStatisticCount", userId);
+            }).catch((err) => {console.log(err)});
+
+            connection.on("ReceiveCommentCount", (getTotalCommentCount) => {
+                $("#commentcount").text(getTotalCommentCount);
+            });
+            connection.on("ReceiveMessageCount", (getTotalMessageCount) => {
+                $("#messagecount").text(getTotalMessageCount);
+                $("#messagecount-header").text(getTotalMessageCount);
+                console.log(getTotalMessageCount)
+            });
+        });
+    </script>
     <!-- Logo -->
     <a href="../index.html" class="logo dark-bg">
         <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -29,10 +55,10 @@
                 <li class="dropdown messages-menu" style="height: 50px; width: 46px">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height: 50px; width: 46px">
                         <i class="icon-envelope"></i>
-                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge">@ViewBag.MessageCount</span></div>
+                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge"><strong id="messagecount"></strong></span></div>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">@ViewBag.MessageCount adet mesajınız var</li>
+                        <li class="header"><div><p id="messagecount-header"></p> adet mesajınız var</div></li>
                         <li>
                             <ul class="menu">
                                 <li>
@@ -77,7 +103,7 @@
                 <li class="dropdown notifications-menu" style="height: 50px; width: 46px">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height: 50px; width: 46px">
                         <i class="icon-megaphone"></i>
-                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge">@ViewBag.TotalCommentCount</span> </div>
+                        <div style="position: relative; right: -8px; top: -30px"> <span class="badge"><strong id="commentcount"></strong></span> </div>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">Son Yorumlar</li>

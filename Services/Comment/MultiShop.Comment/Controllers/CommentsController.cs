@@ -78,6 +78,7 @@ namespace MultiShop.Comment.Controllers
             return Ok(values);
         }
 
+        [AllowAnonymous]
         [HttpGet("GetTotalCommentCount")]
         public IActionResult GetTotalCommentCount()
         {

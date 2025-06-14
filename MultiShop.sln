@@ -1,3 +1,4 @@
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
@@ -86,6 +87,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalRRealTime", "SignalRRealTime", "{B5D4BE38-1151-4F5F-94B1-A6D139710432}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.SignalRRealTimeApi", "Services\SignalRRealTime\MultiShop.SignalRRealTimeApi\MultiShop.SignalRRealTimeApi.csproj", "{1D3F3BC7-996E-4291-9B33-2BE89307ADA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Images.WebUý", "Services\Images\MultiShop.Images.WebUý\MultiShop.Images.WebUý.csproj", "{529ABBF7-1276-492A-B616-4D1C27E6EF07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +180,10 @@ Global
 		{1D3F3BC7-996E-4291-9B33-2BE89307ADA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D3F3BC7-996E-4291-9B33-2BE89307ADA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D3F3BC7-996E-4291-9B33-2BE89307ADA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529ABBF7-1276-492A-B616-4D1C27E6EF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529ABBF7-1276-492A-B616-4D1C27E6EF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529ABBF7-1276-492A-B616-4D1C27E6EF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529ABBF7-1276-492A-B616-4D1C27E6EF07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +223,7 @@ Global
 		{3C739CF2-2BB7-4AFF-A8BD-966335D2C6C4} = {DD09113D-5791-4DDA-8776-6C71F9042F93}
 		{B5D4BE38-1151-4F5F-94B1-A6D139710432} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1D3F3BC7-996E-4291-9B33-2BE89307ADA0} = {B5D4BE38-1151-4F5F-94B1-A6D139710432}
+		{529ABBF7-1276-492A-B616-4D1C27E6EF07} = {C96BD9ED-989A-4B57-986B-0853B03BFD4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64FB16EE-02F2-4E56-9D1E-79395F34D9BF}

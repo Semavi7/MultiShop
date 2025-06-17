@@ -1,0 +1,30 @@
+﻿@model ECommerceViewModel.Rootobject
+@{
+    ViewData["Title"] = "ECommerceList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<div class="container">
+    <table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün Başlığı</th>
+        <th>Ürün Puanı</th>
+        <th>Ürün Fiyatı</th>
+        <th>Ürün Detayları</th>
+    </tr>
+            @foreach(var product in Model.data.products)
+            {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@product.product_title</td>
+                <td>@product.product_rating</td>
+                <td>@product.price</td>
+                <td><a href="@product.product_offer_page_url" class="btn btn-primary">Ürün Detayları</a></td>
+            </tr> 
+            }
+    </table>
+</div>
+

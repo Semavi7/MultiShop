@@ -128,15 +128,16 @@ Bu proje, 55.5 saatlik bir eğitim sürecinin sonunda, teorik bilgileri pratiğe
 
 Bu projenin ortaya çıkmasında yol gösteren ve engin bilgilerini paylaşan değerli eğitmen Murat Yücedağ'a teşekkürü bir borç bilirim!
 
-![Screenshot_10](https://github.com/user-attachments/assets/53bfc432-a8ad-43ff-872e-3acb7bb60f9a)
-![Screenshot_9](https://github.com/user-attachments/assets/07a67900-bed0-430e-aa2c-b67836dd11aa)
-![Screenshot_8](https://github.com/user-attachments/assets/14164bbe-8daa-486d-b521-6ad9b632ce2c)
-![Screenshot_7](https://github.com/user-attachments/assets/e4f72e78-a5bc-4aaf-8f95-1aa4c8c3cac4)
-![Screenshot_6](https://github.com/user-attachments/assets/893be7d2-7c85-4366-baed-75bf9c8c9c34)
-![Screenshot_5](https://github.com/user-attachments/assets/f60c3ee5-12c0-4d6e-b95e-b4173caf2e7d)
-![Screenshot_4](https://github.com/user-attachments/assets/e6c504ac-2e5f-4409-b599-82065f6a3f2d)
-![Screenshot_3](https://github.com/user-attachments/assets/7e432cbc-ce5b-4277-bcee-55243df95c0d)
-![Screenshot_2](https://github.com/user-attachments/assets/87649179-c4f9-4f69-ac74-c165db8af160)
-![Screenshot_1](https://github.com/user-attachments/assets/935f7b13-811b-43d3-bebb-9345c38127d3)
+![Screenshot_10](https://github.com/user-attachments/assets/83515e76-5003-47f9-9e3f-709ccba8c970)
+![Screenshot_9](https://github.com/user-attachments/assets/86c35533-2bf6-44b6-aeb8-ad22e2d53bb4)
+![Screenshot_8](https://github.com/user-attachments/assets/2f030683-e398-468f-a600-5890ddbcd260)
+![Screenshot_7](https://github.com/user-attachments/assets/536dcacd-98a8-4d9c-8a37-fa02214ede91)
+![Screenshot_6](https://github.com/user-attachments/assets/9fa32b46-21f9-4c11-a0b3-2b5ad23b5049)
+![Screenshot_5](https://github.com/user-attachments/assets/a7349081-309c-4868-a9da-7ee670f5f691)
+![Screenshot_4](https://github.com/user-attachments/assets/61b5d0e2-2894-4d3c-b971-efea02fe4efc)
+![Screenshot_3](https://github.com/user-attachments/assets/d531b967-986c-4ece-95b8-27b7f8c80e4d)
+![Screenshot_2](https://github.com/user-attachments/assets/228c8671-4036-48bc-874a-5d4a5d1f92cf)
+![Screenshot_1](https://github.com/user-attachments/assets/0bbf4888-5498-4049-aec5-2543a260a87b)
+
 
 

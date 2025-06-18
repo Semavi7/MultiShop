@@ -1,9 +1,10 @@
-﻿@model List<ResultCategoryDto>
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model List<ResultCategoryDto>
 <div class="container-fluid bg-dark mb-30">
     <div class="row px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
             <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
-                <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Kategoriler</h6>
+                <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>@localizer["Kategoriler"]</h6>
                 <i class="fa fa-angle-down text-dark"></i>
             </a>
             <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
@@ -26,19 +27,29 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="/Default/Index/" class="nav-item nav-link">Ana Sayfa</a>
-                        <a href="shop.html" class="nav-item nav-link">Ürünler</a>
-                        <a href="detail.html" class="nav-item nav-link">Ürün Detayları</a>
+                        <a href="/Default/Index/" class="nav-item nav-link">@localizer["Ana Sayfa"]</a>
+                        <a href="shop.html" class="nav-item nav-link">@localizer["Ürünler"]</a>
+                        <a href="detail.html" class="nav-item nav-link">@localizer["Ürün Detayları"]</a>
 						<div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sayfalar <i class="fa fa-angle-down mt-1"></i></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">@localizer["Sayfalar"] <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Sepetim</a>
-                                <a href="checkout.html" class="dropdown-item">Ödeme</a>
-                                <a href="/Register/Index/" class="dropdown-item">Kayıt Ol</a>
-                                <a href="/Login/Index/" class="dropdown-item">Giriş Yap</a>
+                                <a href="cart.html" class="dropdown-item">@localizer["Sepetim"]</a>
+                                <a href="checkout.html" class="dropdown-item">@localizer["Ödeme"]</a>
+                                <a href="/Register/Index/" class="dropdown-item">@localizer["Kayıt Ol"]</a>
+                                <a href="/Login/Index/" class="dropdown-item">@localizer["Giriş Yap"]</a>
                             </div>
                         </div>
-                        <a href="/Contact/Index/" class="nav-item nav-link">İletişim</a>
+                        <a href="/Contact/Index/" class="nav-item nav-link">@localizer["İletişim"]</a>
+                        @{
+                            var currentCultureName = System.Globalization.CultureInfo.CurrentUICulture.Name;
+                        }
+                        <select id="languageSelector" style="width: 50px">
+                            <option value="tr" selected="@currentCultureName.StartsWith("tr", StringComparison.OrdinalIgnoreCase)">Tr</option>
+                            <option value="en" selected="@currentCultureName.StartsWith("en", StringComparison.OrdinalIgnoreCase)">En</option>
+                            <option value="de" selected="@currentCultureName.StartsWith("de", StringComparison.OrdinalIgnoreCase)">De</option>
+                            <option value="fr" selected="@currentCultureName.StartsWith("fr", StringComparison.OrdinalIgnoreCase)">Fr</option>
+                            <option value="it" selected="@currentCultureName.StartsWith("it", StringComparison.OrdinalIgnoreCase)">It</option>
+                        </select>
                     </div>
                     <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                         <a href="" class="btn px-0">
@@ -55,3 +66,24 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const languageSelector = document.getElementById('languageSelector');
+
+        languageSelector.addEventListener('change', (event) => {
+
+            const selectedCulture = event.target.value;
+            const currentUrl = new URL(window.location.href);
+
+            if (selectedCulture === 'tr') {
+                currentUrl.searchParams.delete('culture');
+            } else {
+                currentUrl.searchParams.set('culture', selectedCulture);
+            }
+
+            window.location.href = currentUrl.toString();
+        });
+
+    });
+</script>

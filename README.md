@@ -127,3 +127,16 @@ Bu proje, 55.5 saatlik bir eğitim sürecinin sonunda, teorik bilgileri pratiğe
 
 
 Bu projenin ortaya çıkmasında yol gösteren ve engin bilgilerini paylaşan değerli eğitmen Murat Yücedağ'a teşekkürü bir borç bilirim!
+
+![Screenshot_10](https://github.com/user-attachments/assets/53bfc432-a8ad-43ff-872e-3acb7bb60f9a)
+![Screenshot_9](https://github.com/user-attachments/assets/07a67900-bed0-430e-aa2c-b67836dd11aa)
+![Screenshot_8](https://github.com/user-attachments/assets/14164bbe-8daa-486d-b521-6ad9b632ce2c)
+![Screenshot_7](https://github.com/user-attachments/assets/e4f72e78-a5bc-4aaf-8f95-1aa4c8c3cac4)
+![Screenshot_6](https://github.com/user-attachments/assets/893be7d2-7c85-4366-baed-75bf9c8c9c34)
+![Screenshot_5](https://github.com/user-attachments/assets/f60c3ee5-12c0-4d6e-b95e-b4173caf2e7d)
+![Screenshot_4](https://github.com/user-attachments/assets/e6c504ac-2e5f-4409-b599-82065f6a3f2d)
+![Screenshot_3](https://github.com/user-attachments/assets/7e432cbc-ce5b-4277-bcee-55243df95c0d)
+![Screenshot_2](https://github.com/user-attachments/assets/87649179-c4f9-4f69-ac74-c165db8af160)
+![Screenshot_1](https://github.com/user-attachments/assets/935f7b13-811b-43d3-bebb-9345c38127d3)
+
+
